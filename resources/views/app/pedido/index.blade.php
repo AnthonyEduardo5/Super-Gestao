@@ -23,6 +23,7 @@
                         <th>Cliente</th>
                         <th></th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +33,7 @@
                             <td>{{ $pedido->cliente_id}}</td>
                             <td><a href= "{{ route('pedido.show',['pedido' => $pedido->id])}}">Vizualizar</a></td>
                             <td>
-                                <form id="form_{{$cliente->id}}" method ="post" action="{{ route('pedido.destroy', ['pedido' => $pedido->id])}}">
+                                <form id="form_{{$pedido->id}}" method ="post" action="{{ route('pedido.destroy', ['pedido' => $pedido->id])}}">
                                     @method('DELETE')
                                     @csrf
                                     <a href= "#" onclick="document.getElementById('form_{{$pedido->id}}').submit()">Excluir</a>
