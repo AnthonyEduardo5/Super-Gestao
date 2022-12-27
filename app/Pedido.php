@@ -11,7 +11,7 @@ class Pedido extends Model
         return $this->belongsToMany('App\Produto', 'pedidos_produtos', 'pedido_id', 'produto_id');
         /*
             1 - Representa a segunda tabela que faz parte do relacionamento NxN
-            2 - Representa a tabela auxiliar que recebe os dados do relacionamento
+            2 - Nome da tabela auxiliar que recebe os dados do relacionamento
             3 - Representa a FK do model(tabela) em que colocamos o codigo do relacionamento
             4 - Representa a FK da segunda tabela que faz parte do relacionamento
 
